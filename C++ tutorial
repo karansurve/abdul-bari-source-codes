@@ -1,0 +1,2830 @@
+/*
+ 
+ // sample
+ 
+ #include <iostream>
+using namespace std;
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    cout << "Hello, World!\n";
+    return 0;
+}
+
+ 
+ // sum of 2 nos
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"Enter two numbers\n";
+    cin>>a>>b;
+   int sum = a + b;
+    cout<<"Sum is "<<sum<<"\n";
+    return 0;
+}
+
+ 
+ // name
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    string name;
+    cout<<"May i know your name?\n";
+    getline(cin,name);
+    cout<<name<<endl;
+    return 0;
+}
+
+ 
+ // area of triangle
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int base = 0,height = 0;
+    float area;
+    cout<<"Enter base = ";
+    cin>>base;
+    cout<<"Enter height = ";
+    cin>>height;
+    area = (float)(base * height) / 2;
+    cout<<area<<endl;
+    return 0;
+}
+
+
+// sum of first n natural numbers
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,sum;
+    cout<<"Enter n: \n";
+    cin>>n;
+    sum = (n)*(n+1)/2;
+    cout<<sum<<endl;
+    return 0;
+}
+
+
+// roots of quadratic equation
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<"Enter a,b,c in ax^2+bx+c : ";
+    cin>>a>>b>>c;
+    float root1 = (-b + sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
+    float root2 = (-b - sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
+    cout<<"root1 = "<<root1<<"\nroot2 = "<<root2<<endl;
+    return 0;
+}
+
+
+// radius
+#include <iostream>
+using namespace std;
+int main(){
+    float r,area;
+    cout<<"Enter the radius = ";
+    cin>>r;
+    //area = 22/7 * r * r ; --> decimal value
+    //area = 22/7.0 * r * r ; --> decimal value
+    //area = 22/7.0f * r * r ; --> decimal value
+    //area = (float)22/7 * r * r ; --> decimal value
+    //area = (float) 22/7.0f * r * r ; --> decimal value
+    //area = 3.1425f * r * r; --> float value
+    cout<<"The area of circle is : "<<area<<endl;
+    return 0;
+}
+
+//enum
+
+enum day{mon=1,tue,wed=5,thurs,fri=7,sat,sun};
+#include <iostream>
+using namespace std;
+int main(){
+    day d;
+    d = thurs;
+    cout<<d<<endl;
+    cout<<mon<<endl;
+    cout<<tue<<endl;
+    cout<<wed<<endl;
+    cout<<thurs<<endl;
+    cout<<fri<<endl;
+    cout<<sat<<endl;
+    cout<<sun<<endl;
+    return 0;
+}
+
+// typedef
+
+typedef int marks;
+typedef int rollno;
+#include <iostream>
+using namespace std;
+int main(){
+    marks m1,m2,m3;
+    rollno r1,r2,r3;
+    m1 = 50;
+    m2= 100;
+    m3 = 42;
+    r1 = 1;
+    r2 = 2;
+    r2 =3;
+    return 0;
+}
+
+// max of two nos
+
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"Enter two numbers : ";
+    cin>>a>>b;
+    if(a>b)
+        cout<<"Max is "<<a;
+    else
+        cout<<"Max is "<<b;
+    return 0;
+}
+
+// number is positive or negative
+
+#include <iostream>
+using namespace std;
+int main(){
+    int a;
+    cout<<"Enter the number : ";
+    cin>>a;
+    if(a>0)
+        cout<<"Positive"<<endl;
+    else
+        cout<<"Negative"<<endl;
+    return 0;
+}
+
+// working hours
+
+#include <iostream>
+using namespace std;
+int main(){
+    //working hours : 9am to 6pm
+    float time;
+    cout<<"Enter time : ";
+    cin>>time;
+    if(time>9.00 && time<18.00)
+        cout<<"Working hours"<<endl;
+    else
+        cout<<"Leisure hours"<<endl;
+    return 0;
+}
+
+// max of 3 nums
+
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<"Enter the numbers : ";
+    cin>>a>>b>>c;
+    if(a>b && a>c)
+        cout<<"Greatest : "<<a<<endl;
+    else{
+        if(b>c)
+            cout<<"Greatest : "<<b<<endl;
+        else
+            cout<<"Greatest : "<<c<<endl;
+    }
+    return 0;
+}
+
+//nature of quadratic roots
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+  // --> ax^2+bx+c
+    int a,b,c,D;
+    cout<<"Enter a,b,c : "<<endl;
+    cin>>a>>b>>c;
+    D = pow(b,2) - 4*a*c;
+    if(D>0)
+        cout<<"Real and unequal roots"<<endl;
+    else if (D == 0)
+        cout<<"Real and equal roots"<<endl;
+    else
+        cout<<"imaginary roots"<<endl;
+    return 0;
+}
+
+// display grades
+
+#include <iostream>
+typedef int marks;
+using namespace std;
+int main(){
+    marks m1,m2,m3;
+    int total;
+    cout<<"Enter your marks : ";
+    cin>>m1>>m2>>m3;
+    total = m1 + m2 + m3;
+    float avg = total/3.0;
+    if (avg>=60)
+        cout<<"A"<<endl;
+    else if (avg>=35 && avg<60)
+        cout<<"B"<<endl;
+    else
+        cout<<"D"<<endl;
+    return 0;
+}
+
+//Display words in digits
+
+#include <iostream>
+enum digits{zero,one,two,three,four,five,six,seven,eight,nine};
+using namespace std;
+int main(){
+    digits d;
+    d = one;
+    cout<<d<<endl;
+    return 0;
+}
+
+//Display name of day
+
+#include <iostream>
+using namespace std;
+int main(){
+    int day;
+    cout<<"Enter day number : ";
+    cin>>day;
+    switch(day){
+        case 1: cout<<"Monday"<<endl;
+            break;
+        case 2: cout<<"Tuesday"<<endl;
+            break;
+        case 3: cout<<"Wednesday"<<endl;
+            break;
+        case 4: cout<<"Thursday"<<endl;
+            break;
+        case 5: cout<<"Friday"<<endl;
+            break;
+        case 6: cout<<"Saturday"<<endl;
+            break;
+        case 7: cout<<"Sunday"<<endl;
+            break;
+        default:cout<<"Warning ! : Enter numbers between 1 to 7"<<endl;
+            break;
+    }
+    return 0;
+}
+
+//bill amount
+
+#include <iostream>
+using namespace std;
+int main(){
+    float billAmount;
+    cout<<"Enter the bill amount : ";
+    cin>>billAmount;
+    
+    if(billAmount < 100.0)
+        cout<<"No Discount Applied"<<billAmount<<endl;
+    else if (billAmount >= 100 && billAmount < 500){
+        cout<<"Congrats! 10% discount applied on your bill : "<<(billAmount) - (billAmount * 0.1)<<endl;
+    }
+    else
+        cout<<"Congrats! 20% discount applied on your bill : "<<(billAmount) - (billAmount * 0.2)<<endl;
+    return 0;
+}
+
+//leap year
+
+#include <iostream>
+using namespace std;
+int main(){
+    int year;
+    cout<<"Enter the year : ";
+    cin>>year;
+    if(year % 4 ==0){
+        if(year % 100 ==0){
+            if(year % 400 ==0){
+                cout<<"Leap year"<<endl;
+            }
+            else
+                cout<<"Not a leap year"<<endl;
+        }
+        else
+            cout<<"Leap year"<<endl;
+    }
+    else
+        cout<<"Not a leap year"<<endl;
+    return 0;
+}
+
+//sum of n natural numbers
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,sum = 0;
+    cout<<"Enter n : ";
+    cin>>n;
+    while(n>0){
+        sum += n;
+        n--;
+    }
+    cout<<sum<<endl;
+    return 0;
+}
+
+//factorial
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n, fact = 1;
+    cout<<"Enter the number : ";
+    cin>>n;
+    while(n>0){
+        fact *= n;
+        n--;
+    }
+    cout<<fact<<endl;
+    return 0;
+}
+
+//factors of a number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    for(int i=n; i>0; i--){
+        if(n%i==0)
+            cout<<i<<" ";
+    }
+    cout<<"\n";
+    return 0;
+}
+
+//perfect number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,sum=0;
+    cout<<"Enter the number : ";
+    cin>>n;
+    for(int i=n; i>0; i--){
+        if(n%i==0)
+            sum+=i;
+    }
+    if(2*n == sum)
+        cout<<"Perfect number\n";
+    else
+        cout<<"Not a perfect number\n";
+    return 0;
+}
+
+//prime number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,count = 0;
+    cout<<"Enter the number : ";
+    cin>>n;
+    for(int i=n; i>0; i--){
+        if(n%i==0)
+            count++;
+    }
+    if(count == 2)
+        cout<<"Prime number\n";
+    else
+        cout<<"Not a Prime number\n";
+    return 0;
+}
+
+//Display digits of a number in reverse order
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,r;
+    cout<<"Enter the number : ";
+    cin>>n;
+    while(n>0){
+        r=n%10;
+       n =  n/10;
+        cout<<r;
+    }
+    cout<<endl;
+    return 0;
+}
+
+//armstrong number
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    int n,r,sum=0,m;
+    cout<<"Enter the number : ";
+    cin>>n;
+    m=n;
+    while(n>0){
+        r=n%10;
+       n =  n/10;
+        sum += pow(r,3);
+    }
+    if(sum == m)
+        cout<<"Armstrong number\n";
+    else
+        cout<<"No"<<endl;
+    return 0;
+}
+
+//palindrome number
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,r,rev = 0,m;
+    cout<<"Enter the number : ";
+    cin>>n;
+    m=n;
+    while(n>0){
+        r = n%10;
+        n = n/10;
+        rev = rev*10 + r;
+    }
+    if(rev == m){
+        cout<<"Palindrome"<<endl;
+    }
+    else
+        cout<<"Not a palindrome"<<endl;
+    return 0;
+}
+
+//arrays
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[5] = {1,2,3,4,5};
+    for(int x : A)
+        cout<<x<<endl;
+    
+    char B[4] = {'A',66,67,'D'};
+    for(auto x : B)
+        cout<<x<<endl;
+    return 0;
+}
+
+//sum of all elements
+
+#include <iostream>
+using namespace std;
+int main(){
+    int sum = 0;
+    int A[] = {43,54,2,44,33,43,22};
+    for(auto x : A){
+        sum += x;
+    }
+    cout<<sum<<endl;
+    return 0;
+}
+
+//max element
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[] = {43,54,2,44,33,43,22};
+    int max = INT_MIN; //OR --> int max = A[0]
+    for(int x : A){
+        if(x>max){
+            max = x;
+        }
+    }
+    cout<<max<<endl;
+    return 0;
+}
+
+//count of positive and negaitve elements
+
+#include <iostream>
+using namespace std;
+int main(){
+    int pos = 0;
+    int neg = 0;
+    int A[] = {-43,54,2,-44,33,43,22};
+    for(int x : A){
+        if(x<0)
+            neg++;
+        else
+            pos++;
+    }
+    cout<<"Positive : "<<pos<<" "<<"Negative : "<<neg<<endl;
+    return 0;
+}
+
+//Linear search
+
+#include <iostream>
+using namespace std;
+int main(){
+    int key;
+    cout<<"Enter key : ";
+    cin>>key;
+    int A[]={12,-3,23,44,32,3,21,-43,3};
+    for(int i=0;i<9;i++){
+        if(key==A[i]){
+            cout<<"Found at index : "<<i<<endl;
+            exit(0);
+        }
+    }
+    cout<<"Not found\n";
+    return 0;
+}
+
+//binary search
+
+#include <iostream>
+using namespace std;
+int main(){
+    int key,l=0,h=6,mid;
+    int A[] = {3,4,7,56,60,77,89,92}; //always in sorted order
+    cout<<"Enter the key : ";
+    cin>>key;
+    while(l<=h){
+        mid = (l+h)/2;
+        if(key==A[mid]){
+            cout<<"Found at index : "<<mid<<endl;
+            return 0;
+        }
+        else if (key<A[mid]){
+            h = mid-1;
+        }
+        else
+            l = mid + 1;
+    }
+    cout<<"Not found"<<endl;
+    return 0;
+}
+
+//nested for
+
+#include <iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<6; i++){
+        for(int j=0; j<6; j++){
+            cout<<"("<<i<<","<<j<<")"<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//lower triangle
+
+#include <iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<5; i++){
+        for(int j=0; j<=i; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//upper triangle
+
+#include <iostream>
+using namespace std;
+int main(){
+    for(int i = 0; i<5; i++){
+        for(int j = 0; j<5; j++){
+            if(i+j>4)
+                cout<<"*";
+            else
+                cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+// pattern1
+
+#include <iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<5; i++){
+        for(int j=0; j<5; j++){
+            if(i+j<4)
+                cout<<"*";
+            else
+                cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//pattern2
+
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<5; i++){
+        for(int j=0; j<5; j++){
+            if(i<=j)
+                cout<<"*";
+            else
+                cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//2d array
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[2][3] = {2,3,4,5,6,7};
+    for(auto &x : A){
+        for(auto &y : x){
+            cout<<y<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//matrix operations
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[2][3] = {2,3,4,5,6,7};
+    int B[2][3] = {1,1,1,1,1,1};
+    int C[2][3];
+    for(int i=0; i<3; i++){
+        for(int j=0; j<4; j++){
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    for(auto &x : C){
+        for( auto &y : x){
+            cout<<y<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+//pointers
+
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 10;
+    int *p = &x;
+    
+    cout<<x<<endl;
+    cout<<&x<<endl;
+    cout<<p<<endl;
+    cout<<*p<<endl;
+    cout<<&p<<endl;
+    return 0;
+}
+
+//dynamic memory allocation
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[20];
+    cout<<sizeof A<<endl;
+    
+    int *p = new int[20];
+    delete []p;
+    
+    p = new int[30];
+    
+    return 0;
+}
+
+//pointer arithmetic
+
+#include <iostream>
+using namespace std;
+int main(){
+    int A[5] = {1,2,3,4,5};
+    int *p = A , *q = &A[4];
+    cout<<q-p<<endl;
+//    cout<<*p<<endl;
+//    p++;
+//    cout<<*p<<endl;
+    
+//    cout<<p<<endl;
+//    cout<<p+2<<endl;
+    
+//    cout<<*p<<endl;
+//    cout<<*(p+2)<<endl;
+
+//    for(int i=0; i<5; i++){
+//        cout<<A[i]<<" ";
+//    }
+//    cout<<endl;
+//
+//    for(int i=0; i<5; i++){
+//        cout<<i[A]<<" ";
+//    }
+//    cout<<endl;
+//
+//    for(int i=0; i<5; i++){
+//        cout<<*(A+i)<<" ";
+//    }
+//    cout<<endl;
+//
+//    for(int i=0; i<5; i++){
+//        cout<<(A+i)<<" ";
+//    }
+//    cout<<endl;
+//
+//   for(int i=0; i<5; i++){
+//        cout<<p[i]<<" ";
+//    }
+//    cout<<endl;
+//
+//    for(int i=0; i<5; i++){
+//        cout<<*(p+i)<<" ";
+//    }
+//    cout<<endl;
+    return 0;
+}
+
+ //pointer to a function
+
+#include <iostream>
+using namespace std;
+int max(int x, int y){
+    return x>y ? x:y;
+}
+int min(int x, int y){
+    return x<y ? x:y;
+}
+int main(){
+    int(*fp)(int,int);
+    
+    fp = max;
+   cout<<fp(10,5)<<endl;
+    
+    fp = min;
+   cout<<fp(10,5)<<endl;
+    
+    return 0;
+}
+
+
+//reference
+
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 10;
+    int &y = x;
+    x++;
+    y++;
+    
+    cout<<x<<endl;
+    cout<<y<<endl;
+    return 0;
+}
+
+//functions
+
+#include <iostream>
+using namespace std;
+
+void display(){
+    cout<<"Hello\n";
+}
+
+float add(float x, float y){
+    float z ;
+    z = x+y;
+    return z;
+}
+
+int main(){
+    display();
+    float x = 2.3, y=7.9, z;
+    z = add(x,y);
+    cout<<z<<endl;
+    return 0;
+}
+
+//function calculating m power n
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+void func(int m, int n){
+    cout<<pow(m, n)<<endl;
+}
+int main(){
+    func(2,3);
+    return 0;
+}
+ 
+//function overloading for sum
+
+#include <iostream>
+using namespace std;
+
+int sum(int x,int y){
+    return x+y;
+}
+
+int sum(int x, int y, int z){
+    return x+y+z;
+}
+
+float sum(float x, float y){
+    return x+y;
+}
+
+
+int main(){
+    cout<<sum(5, 4)<<endl;
+    cout<<sum(6, 12, 18)<<endl;
+    cout<<sum(12.9f, 18.1f)<<endl;
+    return 0;
+}
+
+//template function
+
+#include <iostream>
+using namespace std;
+template <class T>
+T max(T x,T y,T z){
+    return x>y && x>z ? x:(y>z ? y:z);
+}
+int main(){
+    cout<<max(5.0f,19.3f,25.8f)<<endl;
+    return 0;
+}
+
+//default arguements
+
+#include <iostream>
+using namespace std;
+
+int sum(int x = 0, int y=0, int z=0, int a = 0){
+    return x+y+z+a;
+}
+int main(){
+    cout<<sum()<<endl;
+    cout<<sum(5,9)<<endl;
+    cout<<sum(5,9,10)<<endl;
+    cout<<sum(5,9,10,3)<<endl;
+    return 0;
+}
+
+//pass by value
+
+#include <iostream>
+using namespace std;
+
+void swap(int a, int b){
+    int temp;
+    temp =a;
+    a=b;
+    b=temp;
+    cout<<a<<" "<<b<<endl;
+}
+
+int main(){
+    int x = 10, y=20;
+    swap(x,y);
+    cout<<x<<" "<<y<<endl;
+    return 0;
+}
+
+//call by address
+
+#include <iostream>
+using namespace std;
+void swap(int *a, int *b){
+    int temp;
+    temp = *a;
+    *a= *b;
+    *b = temp;
+}
+int main(){
+    int x = 10, y = 20;
+    swap(&x,&y);
+    cout<<x<<" "<<y<<endl;
+    return 0;
+}
+
+//pass by reference
+
+#include <iostream>
+using namespace std;
+void swap(int &a, int &b){
+    int temp;
+    temp = a;
+    a= b;
+    b = temp;
+}
+int main(){
+    int x = 10, y = 20;
+    swap(x,y);
+    cout<<x<<" "<<y<<endl;
+    return 0;
+}
+
+//return by address
+
+#include <iostream>
+using namespace std;
+
+int *fun(int size){
+    int *p = new int[5];
+    for(int i=0; i<5; i++){
+        p[i] = 5+i;
+    }
+    return p;
+}
+int main(){
+    int *q= fun(5);
+    for(int i=0; i<5; i++){
+        cout<<q[i]<<endl;
+    }
+    return 0;
+}
+
+//local and global variables
+
+#include <iostream>
+using namespace std;
+int x = 10;
+int main(){
+    int x =20;
+    {int x = 30;
+        cout<<++x<<endl;
+    }
+    cout<<++x<<endl;
+    cout<<++::x<<endl;
+    return 0;
+}
+
+//static variables
+
+#include <iostream>
+using namespace std;
+void fun(){
+    int x = 10;
+    x++;
+    cout<<x<<endl;
+}
+void fun2(){
+    static int x = 10;
+    x++;
+    cout<<x<<endl;
+}
+int main(){
+    fun();
+    fun();
+    fun();
+    fun2();
+    fun2();
+    fun2();
+    return 0;
+}
+
+//recursive functions
+
+#include <iostream>
+using namespace std;
+
+void fun(int n){
+    if(n>0){
+        cout<<n<<" ";
+        fun(n-1);
+    }
+    cout<<endl;
+}
+void fun2(int n){
+    if(n>0){
+        fun2(n-1);
+        cout<<n<<" ";
+    }
+}
+        
+int main(){
+    fun(5);fun2(5);
+    return 0;
+}
+
+//linear search function
+
+#include <iostream>
+using namespace std;
+
+int LinearSearch(int A[], int n, int key){
+    for(int i=0; i<n; i++){
+        if(key == A[i]){
+            return i;
+            break;
+        }
+    }
+    cout<<"Not FOund\n";
+    return 0;
+}
+
+int main(){
+    int A[5] = {24,43,11,76,4};
+    int k;
+    cout<<"Enter key : ";
+    cin>>k;
+    int index = LinearSearch(A, 5, k);
+    cout<<"Found at index : "<<index<<endl;
+    return 0;
+}
+
+
+//OOPS
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+public:
+    int length;
+    int breadth;
+    
+    int area(){
+        return length*breadth;
+    }
+    int perimeter(){
+        return 2 * (length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1;
+    
+    r1.length = 10;
+    r1.breadth = 5;
+    
+    cout<<r1.area()<<" "<<r1.perimeter()<<endl;
+    return 0;
+}
+
+//pointer to an object
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+public:
+    int length;
+    int breadth;
+    
+    int area(){
+        return length*breadth;
+    }
+    int perimeter(){
+        return 2 * (length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1;
+    Rectangle *ptr = &r1; //or ptr = new Rectangle;
+    ptr -> length = 10;
+    ptr -> breadth = 5;
+    cout<<ptr -> area()<<" "<<ptr -> perimeter()<<endl;
+    return 0;
+}
+
+//data hiding
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+private:
+    int length;
+    int breadth;
+    
+public:
+    void setLength(int l){
+        if(l > 0)
+            length = l;
+        else
+            cout<<"Length can't be negative!!"<<endl;
+    }
+    void setBreadth(int b){
+        if(b > 0)
+            breadth = b;
+        else
+            cout<<"Breadth can't be negative!!"<<endl;
+    }
+    int getLength(){
+        return length;
+    }
+    int getBreadth(){
+        return breadth;
+    }
+    int area(){
+        return length*breadth;
+    }
+    int perimeter(){
+        return 2 * (length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1;
+    r1.setLength(-10);
+    r1.setBreadth(5);
+    cout<<r1.getLength()<<endl;
+    cout<<r1.getBreadth()<<endl;
+    cout<<r1.area()<<endl;
+    cout<<r1.perimeter()<<endl;
+    return 0;
+}
+
+//constructors :
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+private:
+    int length;
+    int breadth;
+    
+public:
+    Rectangle(){
+        length = 1;
+        breadth = 1;
+    }
+    Rectangle(int l, int b){
+        setLength(l);
+        setBreadth(b);
+    }
+    Rectangle(Rectangle &r){
+        length = r.length;
+        breadth = r.breadth;
+    }
+    void setLength(int l){
+        if(l > 0)
+            length = l;
+        else
+            length = 0;
+    }
+    void setBreadth(int b){
+        if(b > 0)
+            breadth = b;
+        else
+            breadth = 0;
+    }
+    int getLength(){
+        return length;
+    }
+    int getBreadth(){
+        return breadth;
+    }
+    int area(){
+        return length*breadth;
+    }
+    int perimeter(){
+        return 2 * (length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1(10,5);
+    Rectangle r2(r1);
+    cout<<r1.area()<<endl;
+    cout<<r2.area()<<endl;
+    return 0;
+}
+
+//scope resolution
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+private:
+    int length;
+    int breadth;
+public:
+    Rectangle();
+    Rectangle(int l, int b);
+    Rectangle(Rectangle &r);
+    void setLength(int l);
+    void setBreadth(int b);
+    int getLength(){return length;};
+    int getBreadth(){return breadth;};
+    int area();
+    int perimeter();
+    bool isSquare();
+    ~Rectangle();
+};
+int main(){
+    Rectangle r1(10,10);
+    cout<<"Area: "<<r1.area()<<endl;
+    if(r1.isSquare()){
+        cout<<"It's a square"<<endl;
+    }
+    return 0;
+}
+
+Rectangle::Rectangle(){
+    length = 1;
+    breadth = 1;
+}
+Rectangle::Rectangle(int l, int b){
+    setLength(l);
+    setBreadth(b);
+}
+Rectangle::Rectangle(Rectangle &r){
+    length = r.length;
+    breadth = r.breadth;
+}
+void Rectangle::setLength(int l){
+    length = l;
+}
+void Rectangle::setBreadth(int b){
+    breadth = b;
+}
+int Rectangle::area(){
+    return length*breadth;
+}
+int Rectangle::perimeter(){
+    return 2 * (length+breadth);
+}
+bool Rectangle::isSquare(){
+    return length==breadth;
+}
+Rectangle::~Rectangle(){
+    cout<<"Rectangle destroyed"<<endl;
+}
+
+//this pointer
+
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+private:
+    int l;
+    int b;
+public:
+    Rectangle(int l, int b){
+        this->l=l;
+        this->b=b;
+    }
+};
+int main(){
+    Rectangle r1(10,5);
+    return 0;
+}
+
+//struct -> public by default && class -> private by default
+
+#include <iostream>
+using namespace std;
+struct Rectangle{
+    int l;
+    int b;
+    void area(){
+        cout<<l*b<<endl;
+    }
+};
+
+class Square{
+public:
+    int sides;
+    void area(){
+        cout<<sides*sides<<endl;
+    }
+};
+
+//exercise
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+typedef int marks,roll;
+class Student{
+private:
+    roll r;
+    marks math,phy,chem;
+    string name;
+public:
+    Student(int r,string n,int m,int p,int c){
+        this->r=r;
+        name = n;
+        math = m;
+        phy = p;
+        chem = c;
+    }
+    int total(){
+        return math+phy+chem;
+    }
+    char grade(){
+        float avg = total()/3;
+        if(avg>=60)
+            return 'A';
+        else if(avg>=40 && avg<60)
+            return 'B';
+        else
+            return 'C';
+    }
+};
+
+int main(){
+    int roll;
+    string name;
+    int m,p,c;
+    cout<<"Enter rollno : ";
+    cin>>roll;
+    cout<<"Enter name : ";
+    cin>>name;
+    cout<<"Enter marks in math,phy,chem resp : ";
+    cin>>m>>p>>c;
+    Student s(roll,name,m,p,c);
+    cout<<"Total : "<<s.total()<<endl;
+    cout<<"Grade : "<<s.grade()<<endl;
+    return 0;
+}
+
+//operator overloading
+
+#include <iostream>
+using namespace std;
+
+class Complex{
+public:
+    int real,img;
+    Complex operator+(Complex c){
+        Complex temp;
+        temp.real = real + c.real;
+        temp.img = img + c.img;
+        return temp;
+    }
+};
+
+int main(){
+    Complex c1,c2,c3;
+    c1.real=5; c1.img=3;
+    c2.real=10; c2.img=5;
+    c3 = c1+c2;
+    cout<<c3.real<<"+i"<<c3.img<<endl;
+    return 0;
+}
+
+//friend function
+
+#include <iostream>
+using namespace std;
+
+class Complex{
+private:
+    int real,img;
+public:
+    Complex(int r=0, int m=0){
+        real = r;
+        img = m;
+    }
+    void Display(){
+        cout<<real<<"+i"<<img<<endl;
+    }
+    friend Complex operator+(Complex c1, Complex c2);
+};
+
+Complex operator+(Complex c1, Complex c2){
+    Complex temp;
+    temp.real = c1.real + c2.real;
+    temp.img = c1.img + c2.img;
+    return temp;
+}
+
+int main(){
+    Complex c1(5,3), c2(10,5), c3;
+    c3 = c1+c2;
+    c3.Display();
+    return 0;
+}
+
+
+//ostream
+
+#include<iostream>
+using namespace std;
+
+class Complex{
+private:
+    int real,img;
+public:
+    Complex(int r=0, int i=0){
+        real = r;
+        img = i;
+    }
+    friend ostream & operator<<(ostream &out, Complex &c); //we can also use void operator instead of ostream & but won't be able to use endl
+};
+
+ostream & operator<<(ostream &out, Complex &c){
+    out<<c.real<<"+i"<<c.img<<endl;
+    return out;
+}
+
+int main(){
+    Complex c(10,5);
+    cout<<c;
+    operator<<(cout,c);
+    return 0;
+}
+
+//exercise
+
+#include <iostream>
+using namespace std;
+
+class Rational{
+private:
+    int p,q;
+public:
+    Rational(){
+        p=1;
+        q=1;
+    }
+    Rational(int p, int q){
+        this->p = p;
+        this->q = q;
+    }
+    Rational(Rational &r){
+        this->p = r.p;
+        this->q = r.q;
+    }
+    int getP(){return p;}
+    int getQ(){return q;}
+    void setP(int p){
+        this->p = p;
+    }
+    void setQ(int q){
+        this->q = q;
+    }
+    Rational operator+(Rational r)
+    {
+        Rational t;
+        t.p = this->p*r.q + this->q*r.p;
+        t.q = this->q*r.q;
+        return t;
+    }
+    friend ostream & operator<<(ostream &os, Rational &r);
+};
+
+ostream & operator<<(ostream &os, Rational &r){
+    os<<r.p<<"/"<<r.q;
+    return os;
+}
+
+int main(){
+    Rational r1(3,4),r2(2,5),r3;
+    r3 = r1+r2;
+    cout<<"Sum of "<<r1<<" and "<<r2<<" is : "<<r3<<endl;
+    return 0;
+}
+
+//inheritance
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+    int a = 0;
+    void display(){
+        cout<<"Display of Base"<<a<<endl;
+    }
+};
+
+class Derived:public Base{
+public:
+    void show(){
+        cout<<"Show of derived"<<endl;
+    }
+};
+
+int main(){
+    Derived d;
+    d.a = 100;
+    Base b;
+    b.display();
+    d.display();
+    d.show();
+    return 0;
+}
+
+// inheritance continued
+
+#include <iostream>
+using namespace std;
+ 
+class Rectangle{
+private:
+    int length;
+    int breadth;
+public:
+    Rectangle();
+    Rectangle(int l, int b);
+    Rectangle(Rectangle &r);
+    int getLength(){return length;}
+    int getBreadth(){return breadth;}
+    void setLength(int l){length = l;}
+    void setBreadth(int b){breadth = b;}
+    int area();
+    int perimeter();
+    bool isSquare();
+    ~Rectangle();
+};
+
+class Cuboid :public Rectangle{
+private:
+    int height;
+public:
+    Cuboid(int h){
+        height = h;
+    }
+    int getHeight(){return height;}
+    void setHeight(int h){height = h; }
+    int volume(){
+        return getLength()*getBreadth()*height;
+    }
+};
+
+int main(){
+    Cuboid c(5);
+    c.setLength(10);
+    c.setBreadth(7);
+    cout<<"volume : "<<c.volume()<<endl;
+    return 0;
+}
+
+Rectangle::Rectangle(){
+     length = 1;
+     breadth = 1;
+}
+
+Rectangle::Rectangle(int l, int b){
+    length = l;
+    breadth = b;
+}
+
+Rectangle::Rectangle(Rectangle &r){
+    length = r.length;
+    breadth = r.breadth;
+}
+
+int Rectangle::area(){
+    return length*breadth;
+}
+
+int Rectangle::perimeter(){
+    return 2*(length+breadth);
+}
+
+bool Rectangle::isSquare(){
+    return length==breadth;
+}
+
+Rectangle::~Rectangle(){
+    cout<<"Rectangle destroyed"<<endl;
+}
+
+//constructors in inheritance
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+    Base(){cout<<"non-para constructor of Base"<<endl;}
+    Base(int x){cout<<"param constructor of Base "<<x<<endl;}
+};
+
+class Derived:Base{
+public:
+    Derived(){cout<<"non-para constructor of Derived"<<endl;}
+    Derived(int y){cout<<"param construcor of Derived "<<y<<endl;}
+    Derived(int x, int y):Base(x)
+    {cout<<"param construcor of Derived "<<y<<endl;}
+};
+
+int main(){
+  //  Derived d;
+  // Derived d(10);
+  Derived d(5,10);
+    return 0;
+}
+
+//access specifiers :
+
+//                            private       protected       public
+//inside class                   Y              Y              Y
+//inside derived class           N              Y              Y
+//inside object                  N              N              Y
+
+// ways of inheritance :
+
+// Parent              Child:public Parent             Child:protected Parent     Child:private Parent
+//   Pri                    Pri                              Pri                          Pri
+//   Pro                    Pro                              Pro                          Pri
+//   Pub                    Pub                              Pro                          pri
+
+
+// Student Exercise
+
+#include <iostream>
+using namespace std;
+
+class Employee{
+private:
+    int eid;
+    string ename;
+public:
+    Employee(int e, string n){
+        eid = e;
+        ename = n;
+    }
+    int getEid(){return eid;}
+    string getEname(){return ename;}
+};
+
+class FullTimeEmployee:public Employee{
+private:
+    int salary;
+public:
+    FullTimeEmployee(int e, string n, int sal):Employee(e,n){
+        salary = sal;
+    }
+    int getSalary(){return salary;}
+};
+
+class PartTimeEmployee:public Employee{
+private:
+    int wage;
+public:
+    PartTimeEmployee(int e, string n, int w):Employee(e,n){
+        wage = w;
+    }
+    int getWage(){return wage;}
+};
+
+int main(){
+    PartTimeEmployee p1(1,"Karan",300000);
+    FullTimeEmployee p2(2,"Raj",134423);
+    
+    cout<<"salary of "<<p2.getEname()<<" is "<<p2.getSalary()<<endl;
+    cout<<"Daily wage of "<<p1.getEname()<<" is "<<p1.getWage()<<endl;
+    return 0;
+}
+
+//Pointer in inheritance
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+    void fun1(){
+        cout<<"fun1 of Base\n";
+    }                                       //Base class pointer , derived class object
+};
+
+class Derived:public Base{
+public:
+    void fun2(){
+        cout<<"fun2 of Derived\n";
+    }
+};
+
+int main(){
+    Derived d;
+    Base *ptr = &d;
+    ptr->fun1();
+  //  ptr->fun2(); --> not allowed
+    // also not allowed :
+    // Base b;
+    // Derived *ptr = &b;
+    return 0;
+}
+
+
+ //overriding
+
+#include <iostream>
+using namespace std;
+
+class Parent{
+public:
+    void disp(){
+        cout<<"hi\n";
+    }
+};
+
+class Child:public Parent{
+public:
+    void disp(){
+        cout<<"Hello\n";
+    }
+};
+
+int main(){
+    Parent p;
+    p.disp();
+    Child c;
+    c.disp();
+    return 0;
+}
+
+// overloading
+
+#include <iostream>
+using namespace std;
+
+class Parent{
+public:
+    void disp(){
+        cout<<"hi\n";
+    }
+};
+
+class Child:public Parent{
+public:
+    void disp(int x){
+        cout<<"Hello "<<x<<endl;;
+    }
+};
+
+int main(){
+    Child c;
+    c.Parent::disp();
+    return 0;
+}
+
+//virtual function
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+  virtual void fun(){
+        cout<<"fun of Base\n";
+    }
+};
+
+class Derived:public Base{
+public:
+    void fun(){
+        cout<<"fun of derived\n";
+    }
+};
+
+int main(){
+    Derived d;
+    Base *p = &d; // or Base *p = new Derived();
+    p->fun();  // --> o/p : fun of derived.
+    return 0;
+}
+
+//polymorphism
+
+#include <iostream>
+using namespace std;
+
+class Car{
+public:
+   virtual void start(){
+        cout<<"Car started\n";
+    }
+};
+
+class Scorpio:public Car{
+public:
+    void start(){
+        cout<<"Scorpio started\n";
+    }
+};
+
+class Ciaz:public Car{
+public:
+    void start(){
+        cout<<"Ciaz started\n";
+    }
+};
+
+int main(){
+    Car *c = new Scorpio();
+    c->start();
+    c=new Ciaz;
+    c->start();
+    return 0;
+}
+
+//abstract classes --> class with pure virtual function
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+    void fun1(){
+        cout<<"fun1 of base\n";
+    }
+    virtual void fun2()=0; //--> pure virtual func. We need to override this func. in Derived class or else Derived will become abstract i.e we can't make object of that class.
+};
+
+class Derived:public Base{
+public:
+    void fun2(){
+        cout<<"fun2 of derived\n";
+    }
+};
+
+int main(){
+    Derived d;
+    d.fun1();
+    d.fun2();
+    return 0;
+}
+
+//Exercise
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Shape{
+public:
+    virtual float area()=0;
+    virtual float perimeter()=0;
+};
+
+class Rectangle:public Shape{
+private:
+    float length;
+    float breadth;
+public:
+    Rectangle(float l=1.0f, float b=1.0f){
+        length = l;
+        breadth = b;
+    }
+    float area(){
+        return length*breadth;
+    }
+    float perimeter(){
+        return 2*(length+breadth);
+    }
+};
+ 
+class Circle:public Shape{
+private:
+    float radius;
+public:
+    Circle(float r = 1.0f){radius = r;}
+    float area(){
+        return 3.14*pow(radius,2);
+    }
+    float perimeter(){
+        return 2*3.14*radius;
+    }
+};
+
+int main(){
+    Shape *s = new Circle(10);
+    cout<<"Area of Circle : "<<s->area()<<endl;
+    cout<<"Perimeter of Circle : "<<s->perimeter()<<endl;
+    
+    s= new Rectangle(10.0,5.0);
+    cout<<"Area of Rectangle : "<<s->area()<<endl;
+    cout<<"Perimeter of Rectangle : "<<s->perimeter()<<endl;
+    return 0;
+}
+
+//friend function
+
+#include <iostream>
+using namespace std;
+
+class Test{
+private: int a;
+protected: int b;
+public: int c;
+    friend void fun();
+};
+
+void fun(){
+    Test t;
+    t.a = 15;
+    t.b = 10;
+    t.c = 5;
+}
+ 
+
+//friend func within classes
+
+#include <iostream>
+using namespace std;
+
+class Your;
+
+class My{
+private: int a;
+protected: int b;
+public: int c;
+    friend Your;
+};
+
+class Your{
+public:
+    My m;
+    void fun(){
+        m.a = 15;
+        m.b = 153;
+        m.c = 145;
+    }
+};
+
+
+// static members
+
+#include <iostream>
+using namespace std;
+
+class Test{
+public:
+    int a;
+    static int count;
+    Test(){
+        a = 10;
+        count++;
+    }
+    static int getCount(){
+        // a++; --> non static members are not allowed inside static function
+        return count;
+    }
+};
+int Test::count = 0;
+
+int main(){
+    Test t1,t2;
+    cout<<t1.count<<endl;
+    cout<<t2.count<<endl;
+    t1.count =25;
+    cout<<t2.count<<endl;
+    cout<<Test::count<<endl;
+    cout<<Test::getCount()<<endl;
+    cout<<t1.getCount()<<endl;
+    return 0;
+}
+
+
+// exercise
+
+#include <iostream>
+using namespace std;
+
+class Student{
+public:
+    int roll;
+    string name;
+    static int admissionNo;
+    Student(string n){
+        name = n;
+        admissionNo++;
+        roll = admissionNo;
+    }
+    void display(){
+        cout<<"Name : "<<name<<endl<<"RollNo : "<<roll<<endl;
+    }
+   static int getAdmissionNo(){
+        return admissionNo;
+    }
+};
+int Student::admissionNo=0;
+
+int main(){
+    Student s1("Karan");
+    Student s2("Nidhi");
+    Student s3("Shweta");
+    Student s4("Yash");
+    Student s5("Vishal");
+    Student s6("Kim");
+    
+    s1.display();
+    s3.display();
+    s5.display();
+    s2.display();
+    
+    cout<<"Number of Admissions : "<<Student::getAdmissionNo()<<endl;
+    return 0;
+}
+
+//inner classes
+
+#include <iostream>
+using namespace std;
+
+class Outer{
+public:
+    void fun(){
+        i.display();
+    }
+    
+    class Inner{
+    public:
+        void display(){
+            cout<<"display of inner class"<<endl;
+        }
+    };
+    
+    Inner i;
+};
+
+int main(){
+    Outer::Inner i; //only becuase it is inside public in outer class
+    return 0;
+}
+
+//exception handling
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int x=10,y=0,z;
+    try{
+        if(y==0)
+            throw 1;
+        z = x/y;
+        cout<<z<<endl;
+    }
+    catch(int e){
+        cout<<"Division by zero "<<e<<endl;
+    }
+    cout<<"Bye"<<endl;
+    return 0;
+}
+
+// communication between 2 functions
+
+#include <iostream>
+using namespace std;
+
+int division(int a, int b){
+    if(b==0)
+        throw string("Div by zero");
+    return a/b;
+}
+
+int main(){
+    int x=10,y=2,z;
+    try{
+       
+        z = division(x,y);
+        cout<<z<<endl;
+    }
+    catch(string e){
+        cout<<e<<endl;
+    }
+    // catch(...) --> catches every datatype or class anything
+    cout<<"Bye"<<endl;
+    return 0;
+}
+
+// template class
+
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Stack{
+private:
+    T *stk;
+    int top;
+    int size;
+public:
+    Stack(int sz){
+        size = sz;
+        top = -1;
+        stk = new T[size];
+    }
+    void push(T x);
+    T pop();
+};
+
+template <class T>
+void Stack<T>::push(T x){
+    if(top==size-1)
+        cout<<"Stack is Full"<<endl;
+    else{
+        top++;
+        stk[top]=x;
+    }
+}
+
+template <class T>
+T Stack<T>::pop(){
+    T x = 0;
+    if(top==-1)
+        cout<<"Stack is empty"<<endl;
+    else{
+        x = stk[top];
+        top--;
+    }
+    return x;
+}
+
+int main(){
+    Stack<int> s(10); //it can be of any data type
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    return 0;
+}
+
+//constants
+
+#include <iostream>
+using namespace std;
+int main(){
+    const int x = 10;
+    const int *ptr = &x; //use const in ptr also or else it will give error
+    //++*ptr; --> we cannot modify it.
+    return 0;
+}
+
+//preprocessor directives
+
+#include <iostream>
+using namespace std;
+
+#define max(x,y) (x>y?x:y) //brackets are compulsory
+#define msg(x) #x
+#define PI 3
+#ifndef PI
+    #define PI 3.1425                   //if PI is not defined then defined as 3.1425
+#endif
+
+int main(){
+    cout<<PI<<endl;
+    cout<<max(10,12)<<endl;
+    cout<<msg(hello)<<endl;
+    return 0;
+}
+
+//namespace
+
+#include <iostream>
+using namespace std;
+
+namespace First{
+void fun(){
+    cout<<"First\n";
+}
+};
+
+namespace Second {
+void fun(){
+    cout<<"Second\n";
+}
+};
+
+//int main(){
+//    First::fun();
+//    return 0;
+//}
+
+//using namespace First;
+//int main(){
+//    fun();
+//    return 0;
+//}
+
+using namespace First;
+int main(){
+    Second::fun();
+    return 0;
+}
+
+//destructors
+
+#include <iostream>
+using namespace std;
+class Demo{
+    int *p;
+public:
+    Demo(){
+        p = new int[10];
+        cout<<"cdemo created\n";
+    }
+    ~Demo(){
+        delete []p;
+        cout<<"Demo destroyed\n";
+    }
+};
+
+void fun(){
+    Demo *p = new Demo(); // if we only write this line then only constructor will be called
+    delete p; //now both constr as well as destr will be called
+}
+
+int main(){
+    fun();
+    return 0;
+}
+
+//virtual destructor
+
+//#include <iostream>
+//using namespace std;
+//
+//class Base{
+//public:
+//    Base(){cout<<"constructor of base\n";}
+//    ~Base(){cout<<"destructor of base\n";}
+//};
+//
+//class Derived:public Base{
+//public:
+//    Derived(){cout<<"constructor of derived\n";}
+//    ~Derived(){cout<<"destructor of derived\n";}
+//};
+//
+//void fun(){
+//    Derived d;
+//}
+//
+//int main(){
+//    fun();
+//    return 0;
+//}
+
+#include <iostream>
+using namespace std;
+
+class Base{
+public:
+   virtual ~Base(){cout<<"destructor of base\n";} // so that both destructors will be called else only destructor of base will be called
+};
+
+class Derived:public Base{
+public:
+    ~Derived(){cout<<"destructor of derived\n";}
+};
+
+void fun(){
+    Base *p = new Derived();
+    delete p;
+}
+
+int main(){
+    fun();
+    return 0;
+}
+
+
+//io streams
+//writing data in a file
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(){
+    ofstream ofs("Mine.txt", ios::trunc); //or we can also use ios::app for append
+    ofs<<"Karan"<<endl;
+    ofs<<45<<endl;
+    ofs<<"comps"<<endl;
+                            //go to file and project setting to know the file location
+    ofs.close();
+    return 0;
+}
+
+
+//reading data from a file
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int main(){
+    ifstream ifs("Mine.txt"); //opening the file
+    string name,branch;         // method 2 for opening the file :
+    int roll;                   //ifs.open()
+    
+    ifs>>name>>roll>>branch; //reading the data from the file
+    ifs.close(); //closing the file
+    
+    cout<<"Name "<<name<<endl;
+    cout<<"Roll "<<roll<<endl;
+    cout<<"Branch "<<branch<<endl;
+    
+    return 0;
+}
+
+//serialization
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class Student{
+public:
+    string name,branch;
+    int roll;
+    friend ofstream & operator<<(ofstream &os, Student &s);
+    friend ifstream & operator>>(ifstream &is, Student &s);
+};
+
+ofstream & operator<<(ofstream &os, Student &s){
+    os<<s.name<<endl;
+    os<<s.roll<<endl;
+    os<<s.branch<<endl;
+    return os;
+}
+
+ifstream & operator>>(ifstream &is, Student &s){
+    is>>s.name>>s.roll>>s.branch;
+    return is;
+}
+
+int main(){
+    Student s1;
+//    s1.name = "Karan";
+//    s1.roll = 45;
+//    s1.branch = "cs";                     // writing in a file
+//
+//    ofstream os("Mine.txt", ios::app);
+//    os<<s1;
+//    os.close();
+    
+    ifstream is("Mine.txt");            //reading from a file
+    is>>s1;
+    
+    cout<<"Name "<<s1.name<<endl;           //printing o/p on console
+    cout<<"Roll "<<s1.roll<<endl;
+    cout<<"Branch "<<s1.branch<<endl;
+    is.close();
+    
+    return 0;
+}
+
+//execise
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class Item{
+private:
+    string name;
+    float price;
+    int qty;
+public:
+    Item(){}
+    Item(string n, float p, int q);
+    friend ifstream & operator >>(ifstream &fis, Item &i);
+    friend ofstream & operator <<(ofstream &fos, Item &i);
+    friend ostream & operator <<(ostream &os, Item &i);
+};
+
+int main(){
+    int n;
+    string name;
+    float price;
+    int qty;
+    cout<<"Enter number of items : ";
+    cin>>n;
+    
+    Item *list[n];
+    cout<<"Enter all item "<<endl;
+    for(int i=0; i<n; i++){
+        cout<<"Enter "<<i+1<<" item name, price and quantity";
+        cin>>name;
+        cin>>price;
+        cin>>qty;
+        list[i] = new Item(name, price, qty);
+        
+    }
+    ofstream fos("Items.txt");
+     for(int i=0;i<n;i++)
+     {
+     fos<<*list[i];
+     }
+     Item item;
+     ifstream fis("Items.txt");
+     for(int i=0;i<3;i++)
+     {
+     fis>>item;
+     cout<<"Item "<<i<<item<<endl;
+     }
+     
+    }
+    Item::Item(string n,float p,int q)
+    {
+     name=n;
+     price=p;
+     qty=q;
+    }
+    ofstream & operator<<(ofstream &fos,Item &i)
+    {
+     fos<<i.name<<endl<<i.price<<endl<<i.qty<<endl;
+     return fos;
+    }
+    ifstream & operator>>(ifstream &fis,Item &i)
+    {
+     fis>>i.name>>i.price>>i.qty;
+     return fis;
+    }
+    ostream & operator<<(ostream &os,Item &i)
+    {
+     os<<i.name<<endl<<i.price<<endl<<i.qty<<endl;
+     return os;
+    }
+
+//C++ 11
+//auto --> used if we don't know the datatype
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    auto x= 2*5.7+'a';
+    cout<<x<<endl;
+    
+    int a = 10;
+    float b = 90.5;
+    decltype(b) z = a+b; //z has same datatype as b
+    cout<<z<<endl;
+    return 0;
+}
+
+//final -->if use with class; can't be inherited, if used with functions(only virtual are allowed) they can't be overriden
+
+#include <iostream>
+using namespace std;
+
+class Parent final{
+public:
+    virtual void display() final{
+        cout<<"hello"<<endl;
+    }
+};
+
+
+//lamnda expressions
+
+#include <iostream>
+using namespace std;
+int main(){
+    auto x = [](){cout<<"hello\n";}; //or we can directly call the func without x by adding () in the end
+    x();
+    [](int x, int y){cout<<x+y<<endl;}(10,30);
+    // or cout<<([](int x, int y){cout<<x+y<<endl;}(10,30));
+    //or int a = [](int x, int y)->int{return x+y;}(10,30); cout<<a;
+    
+    int a = 10;
+    [a](){cout<<a<<endl;}(); //--> this is just like call by value i.e later a++ won't change the value of output from lambda expression
+    auto f = [&a](){cout<<a++<<endl;};
+    f();
+    a++;
+    f();
+    
+}
+
+//smart pointers --> will handle memory leak by deleting pointer as well as object created
+//unique_ptr : no other pointer can point on the obj.But can be moved to anoter pointer : ptr2 = move(ptr)
+//syntax: unique_ptr<Rectangle> ptr(new Rectangle(10,5)); cout<<ptr->area()<<endl;
+
+//shared_ptr: more than 2 can share the point on the same object. problem of deadlock.reference counter is maintained --> ptr.use_count()
+
+//weak_ptr : not strong hold on the object it is pointing on. solution to deadlock problem.No reference counter is maintained i.e we won't know how many pointers are pointing on the same object.
+
+//inClass initializer and delegation of constructors
+
+#include <iostream>
+using namespace std;
+
+class Test{
+    int x = 10; int y = 30;
+public:
+    Test(int a, int b){
+        x=a;
+        y=b;
+    }
+    Test():Test(1,1)
+    {}
+};
+
+//ellipses
+
+#include <iostream>
+using namespace std;
+
+int sum(int n, ...){
+    va_list list; //for accessing variable arguements
+    va_start(list, n); //to get all the arguements in this list
+    
+    int x;
+    int s=0;
+    for(int i=0; i<n; i++){
+        x = va_arg(list,int);
+        s+=x;
+    }
+    return s;
+}
+
+int main(){ //no. of arguements to add
+//            |
+    cout<<sum(3,10,20,30)<<endl;
+            //   |  |  |
+            // arguements
+}
+
+
+//Banking System
+
+#include<iostream>
+
+#include<fstream>
+
+#include<cstdlib>
+
+#include<vector>
+
+#include<map>
+
+using namespace std;
+#define MIN_BALANCE 500
+class InsufficientFunds {};
+class Account {
+  private: long accountNumber;
+  string firstName;
+  string lastName;
+  float balance;
+  static long NextAccountNumber;
+  public: Account() {}
+  Account(string fname, string lname, float balance);
+  long getAccNo() {
+    return accountNumber;
+  }
+  string getFirstName() {
+    return firstName;
+  }
+  string getLastName() {
+    return lastName;
+  }
+  float getBalance() {
+    return balance;
+  }
+
+  void Deposit(float amount);
+  void Withdraw(float amount);
+  static void setLastAccountNumber(long accountNumber);
+  static long getLastAccountNumber();
+  friend ofstream & operator << (ofstream & ofs, Account & acc);
+  friend ifstream & operator >> (ifstream & ifs, Account & acc);
+  friend ostream & operator << (ostream & os, Account & acc);
+};
+long Account::NextAccountNumber = 0;
+class Bank {
+  private: map < long,
+  Account > accounts;
+  public: Bank();
+  Account OpenAccount(string fname, string lname, float balance);
+  Account BalanceEnquiry(long accountNumber);
+  Account Deposit(long accountNumber, float amount);
+  Account Withdraw(long accountNumber, float amount);
+  void CloseAccount(long accountNumber);
+  void ShowAllAccounts();
+  ~Bank();
+};
+int main() {
+  Bank b;
+  Account acc;
+
+  int choice;
+  string fname, lname;
+  long accountNumber;
+  float balance;
+  float amount;
+  cout << "***Banking System***" << endl;
+  do {
+    cout << "\n\tSelect one option below ";
+    cout << "\n\t1 Open an Account";
+    cout << "\n\t2 Balance Enquiry";
+    cout << "\n\t3 Deposit";
+    cout << "\n\t4 Withdrawal";
+    cout << "\n\t5 Close an Account";
+    cout << "\n\t6 Show All Accounts";
+    cout << "\n\t7 Quit";
+    cout << "\nEnter your choice: ";
+    cin >> choice;
+    switch (choice) {
+    case 1:
+      cout << "Enter First Name: ";
+      cin >> fname;
+      cout << "Enter Last Name: ";
+      cin >> lname;
+      cout << "Enter initil Balance: ";
+      cin >> balance;
+      acc = b.OpenAccount(fname, lname, balance);
+      cout << endl << "Congradulation Account is Created" << endl;
+      cout << acc;
+      break;
+    case 2:
+      cout << "Enter Account Number:";
+      cin >> accountNumber;
+      acc = b.BalanceEnquiry(accountNumber);
+      cout << endl << "Your Account Details" << endl;
+      cout << acc;
+      break;
+    case 3:
+      cout << "Enter Account Number:";
+      cin >> accountNumber;
+      cout << "Enter Balance:";
+      cin >> amount;
+      acc = b.Deposit(accountNumber, amount);
+      cout << endl << "Amount is Deposited" << endl;
+      cout << acc;
+
+      break;
+    case 4:
+      cout << "Enter Account Number:";
+      cin >> accountNumber;
+      cout << "Enter Balance:";
+      cin >> amount;
+      acc = b.Withdraw(accountNumber, amount);
+      cout << endl << "Amount Withdrawn" << endl;
+      cout << acc;
+      break;
+    case 5:
+      cout << "Enter Account Number:";
+      cin >> accountNumber;
+      b.CloseAccount(accountNumber);
+      cout << endl << "Account is Closed" << endl;
+      cout << acc;
+    case 6:
+      b.ShowAllAccounts();
+      break;
+    case 7:
+      break;
+    default:
+      cout << "\nEnter corret choice";
+      exit(0);
+    }
+  } while (choice != 7);
+
+  return 0;
+}
+Account::Account(string fname, string lname, float balance) {
+  NextAccountNumber++;
+  accountNumber = NextAccountNumber;
+  firstName = fname;
+  lastName = lname;
+  this -> balance = balance;
+}
+void Account::Deposit(float amount) {
+  balance += amount;
+}
+void Account::Withdraw(float amount) {
+  if (balance - amount < MIN_BALANCE)
+    throw InsufficientFunds();
+  balance -= amount;
+}
+void Account::setLastAccountNumber(long accountNumber) {
+  NextAccountNumber = accountNumber;
+}
+long Account::getLastAccountNumber() {
+  return NextAccountNumber;
+}
+ofstream & operator << (ofstream & ofs, Account & acc) {
+  ofs << acc.accountNumber << endl;
+  ofs << acc.firstName << endl;
+  ofs << acc.lastName << endl;
+  ofs << acc.balance << endl;
+  return ofs;
+}
+ifstream & operator >> (ifstream & ifs, Account & acc) {
+  ifs >> acc.accountNumber;
+  ifs >> acc.firstName;
+  ifs >> acc.lastName;
+  ifs >> acc.balance;
+  return ifs;
+
+}
+ostream & operator << (ostream & os, Account & acc) {
+  os << "First Name:" << acc.getFirstName() << endl;
+  os << "Last Name:" << acc.getLastName() << endl;
+  os << "Account Number:" << acc.getAccNo() << endl;
+  os << "Balance:" << acc.getBalance() << endl;
+  return os;
+}
+Bank::Bank() {
+
+  Account account;
+  ifstream infile;
+  infile.open("Bank.data");
+  if (!infile) {
+    //cout<<"Error in Opening! File Not Found!!"<<endl;
+    return;
+  }
+  while (!infile.eof()) {
+    infile >> account;
+    accounts.insert(pair < long, Account > (account.getAccNo(), account));
+  }
+  Account::setLastAccountNumber(account.getAccNo());
+
+  infile.close();
+
+}
+Account Bank::OpenAccount(string fname, string lname, float balance) {
+  ofstream outfile;
+  Account account(fname, lname, balance);
+  accounts.insert(pair < long, Account > (account.getAccNo(), account));
+
+  outfile.open("Bank.data", ios::trunc);
+
+  map < long, Account > ::iterator itr;
+  for (itr = accounts.begin(); itr != accounts.end(); itr++) {
+    outfile << itr -> second;
+  }
+  outfile.close();
+  return account;
+}
+Account Bank::BalanceEnquiry(long accountNumber) {
+  map < long, Account > ::iterator itr = accounts.find(accountNumber);
+  return itr -> second;
+}
+Account Bank::Deposit(long accountNumber, float amount) {
+  map < long, Account > ::iterator itr = accounts.find(accountNumber);
+  itr -> second.Deposit(amount);
+  return itr -> second;
+}
+Account Bank::Withdraw(long accountNumber, float amount) {
+  map < long, Account > ::iterator itr = accounts.find(accountNumber);
+  itr -> second.Withdraw(amount);
+  return itr -> second;
+}
+void Bank::CloseAccount(long accountNumber) {
+  map < long, Account > ::iterator itr = accounts.find(accountNumber);
+  cout << "Account Deleted" << itr -> second;
+  accounts.erase(accountNumber);
+}
+void Bank::ShowAllAccounts() {
+  map < long, Account > ::iterator itr;
+  for (itr = accounts.begin(); itr != accounts.end(); itr++) {
+    cout << "Account " << itr -> first << endl << itr -> second << endl;
+  }
+}
+Bank::~Bank() {
+  ofstream outfile;
+  outfile.open("Bank.data", ios::trunc);
+
+  map < long, Account > ::iterator itr;
+  for (itr = accounts.begin(); itr != accounts.end(); itr++) {
+    outfile << itr -> second;
+  }
+  outfile.close();
+} */
+
